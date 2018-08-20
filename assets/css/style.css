@@ -21,4 +21,8 @@
     color: #E21D38;
 }
 
+.navbar-collapse collapse show .redbar {
+    display: none;
+}
+
 
