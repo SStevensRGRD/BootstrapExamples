@@ -8,7 +8,7 @@ body {
   height: 100%;
 }
 
-body {
+main {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -16,6 +16,17 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: white;
+}
+
+/*sjs 8/21/18 change default border color of inputs*/
+.form-control {
+  border-color: #6c757d;
+}
+
+/*sjs 8/21/18 change default border color of inputs*/
+.form-control:focus {  
+  border-color: #6c757d;
+  box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
 }
 
 .form-signin {
