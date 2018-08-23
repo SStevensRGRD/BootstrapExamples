@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="tables example">
+    <meta name="author" content="Sue Stevens">
+
+    <!--favicon-->
+    <link rel="icon" href="assets/images/favicon.ico">
+
+    <!--Application Name-->
+    <title>Tables</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!--Custom local stylesheet for common shared elements like header and footer-->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <!--Custom local stylesheet for elements unique to this page-->
+    <link href="assets/css/dragndrop_table_columns.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header class="container-fluid pl-0 pr-0 border-bottom">
+        <!--The Nav Bar - navbar-dark bg-dark is black background, white letters-->
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img class = "img-responsive" src="assets/images/50 px Logo.jpg" alt="" height="50">&nbsp;&nbsp;&nbsp;Name of App</a>
+                
+            <!--The Hamburger-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div id="navbarNavDropdown" class="navbar-collapse collapse">
+                <!--some navigation items on the left **Note! text-right in the hamburger-->
+                <ul class="navbar-nav mr-auto text-right">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span><span class="redbar">&emsp;|</span></a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nav Item #1<span class="redbar">&emsp;|</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nav Item #2</a>
+                    </li>        
+                </ul>
+                <!--some navigation items on the right-->
+                <ul class="navbar-nav text-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Dropdown #1</a>
+                            <a class="dropdown-item" href="#">Dropdown #2</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/login') }}"><span class="redbar">|&emsp;</span>Nav Item #3<span class="redbar">&emsp;|</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/register') }}">Nav Item #4</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+       
+    <main class="container mt-5">
+        <table class="table table-bordered table-hover table-sm table-responsive-md">
+            <thead>
+                <tr class="dnd-moved">
+                    <th scope="col">Column #1</th>
+                    <th scope="col">Column #2</th>
+                    <th scope="col">Column #3</th>
+                    <th scope="col">Column #4</th>
+                    <th scope="col">Column #5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr scope="row" class="dnd-moved">
+                    <td>Row #1-1</td>
+                    <td>Row #1-2</td>
+                    <td>Row #1-3</td>
+                    <td>Row #1-4</td>
+                    <td>Row #1-5</td>
+                </tr>
+                <tr scope="row" class="dnd-moved">
+                    <td>Row #2-1</td>
+                    <td>Row #2-2</td>
+                    <td>Row #2-3</td>
+                    <td>Row #2-4</td>
+                    <td>Row #2-5</td>
+                </tr>
+                <tr scope="row" class="dnd-moved">
+                    <td>Row #3-1</td>
+                    <td>Row #3-2</td>
+                    <td>Row #3-3</td>
+                    <td>Row #3-4</td>
+                    <td>Row #3-5</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+<!--footer will always be on bottom of content-->
+<footer class="footer border-top">
+    <div class="container-fluid">
+        <p id="copyright">&copy; 2018 Robbins Geller Rudman &amp; Dowd LLP</p>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

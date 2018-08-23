@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="nav and footer example">
+    <meta name="description" content="login example">
     <meta name="author" content="Sue Stevens">
 
     <!--favicon-->
@@ -25,39 +25,57 @@
     <link href="assets/css/floating-labels.css" rel="stylesheet">
   </head>
 
+  <!--
+      Google's autofill messes up the display / floating labels
+      One potential solution is to add 'autocomplete="email"' to the username field and add 'autocomplete="new-password"' to the password field.
+
+    -->
+
   <body>
+      <!--This form contains no header by design-->
 
-    <header class="container-fluid pl-0 pr-0 border-bottom">
-
-
-    </header>
        
-    <main class="container">
-        <form class="form-signin">
-            <div class="text-center mb-4">
-                <img class="mb-4" src="assets/images/RGRD_LLP_logo_small.jpg" alt="" width="283" height="126">
-                <h1 class="h3 mb-3 font-weight-normal">Application Name</h1>
-                <p>Please log in to continue</p>
-            </div>
+    <main>
         
-            <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control outline-secondary" placeholder="Email address" required autofocus>
-                <label for="inputEmail">User Name</label>
+        <!--Use Bootstrap's grid system inside the main area of the page-->
+        <div class="container">
+        <!--1st row holds the logo and application name-->
+            <div class="Row">
+                <div class="col-12">
+                    <div class="text-center mb-4">
+                        <img class="mb-4" src="assets/images/DummyLogo.jpg" alt="" width="275" height="125">
+                        <h1 class="h3 mb-3 font-weight-normal">A Very Long Application Name</h1>
+                        <p>Please log in to continue</p>
+                    </div>
+                </div>
             </div>
-        
-            <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <label for="inputPassword">Password</label>
+            <!--2nd row holds the form-->
+            <div class="Row">
+                <div class="col-12">
+                    <form class="form-signin">        
+                        <div class="form-label-group">
+                            <input type="email" id="inputEmail" class="form-control outline-secondary" placeholder="Email address" autocomplete="email" required autofocus>
+                            <label for="inputEmail">User Name</label>
+                        </div>
+                    
+                        <div class="form-label-group">
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" autocomplete="new-password" required>
+                            <label for="inputPassword">Password</label>
+                        </div>
+                    
+                        <button class="btn btn-lg btn-light btn-outline-secondary" type="submit">Log in</button>
+                    </form>
+                </div>
             </div>
-        
-            <button class="btn btn-lg btn-light btn-outline-secondary" type="submit">Log in</button>
-        </form>
+
+        </div>
+
     </main>
 
 <!--footer will always be on bottom of content-->
 <footer class="footer border-top">
     <div class="container-fluid">
-        <p id="copyright">&copy; 2018 Robbins Geller Rudman &amp; Dowd LLP</p>
+        <p id="copyright">&copy; yyyy Your Company Name Here!</p>
     </div>
 </footer>
 

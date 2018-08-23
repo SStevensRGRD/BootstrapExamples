@@ -8,6 +8,7 @@ body {
   height: 100%;
 }
 
+/*sjs 8/21/18 changed container to 'main'*/
 main {
   display: -ms-flexbox;
   display: flex;
